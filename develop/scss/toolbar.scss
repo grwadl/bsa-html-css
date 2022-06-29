@@ -1,0 +1,26 @@
+@import 'constants';
+@import 'mixins/mixins';
+
+.main {
+
+  .main__toolbar {
+    padding: 20px 10px 0 20px;
+    border-right: 2px solid black;
+
+    .main__aside-list {
+
+      .main__aside-streamer {
+        @include textMixin;
+        list-style: none;
+        padding: 20px 0;
+        transition-duration: .3s;
+
+        &:hover {
+          @include hoverBlackItem;
+          color: $app-red;
+          transition-duration: .3s;
+        }
+      }
+    }
+  }
+}

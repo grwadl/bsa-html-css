@@ -45,14 +45,15 @@
   color: white;
   text-align: justify;
   padding: 7px 30px 7px 10px;
-  border: solid black;
+  border: solid white;
+  background: #202020;
   width: 100%;
   border-width: 0 0 1px 0;
   transition-duration: 0.1s;
 }
 .header__input-wrapper .header__search-bar-wrapper input:focus {
   outline: none;
-  border: solid darkblue !important;
+  border: solid #6e0710 !important;
   border-width: 0 0 2.3px 0 !important;
   transition-duration: 0.1s;
 }
@@ -60,6 +61,7 @@
   font-size: 18px;
   margin-left: -25px;
   transition-duration: 0.3s;
+  color: white;
   z-index: 1;
   cursor: pointer;
 }
@@ -74,6 +76,7 @@
 }
 .header__input-wrapper .header__mic-icon .fa-microphone {
   font-size: 22px;
+  color: white;
   margin: -2px 0 0 10px;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -90,14 +93,16 @@
   gap: 20px;
 }
 .header__menus .fa-bell,
-.header__menus .fa-paw {
+.header__menus .fa-paw.fa-paw-trigger {
   font-size: 24px;
   cursor: pointer;
   transition-duration: 0.3s;
+  color: white;
 }
 .header__menus .fa-bell:hover,
-.header__menus .fa-paw:hover {
+.header__menus .fa-paw.fa-paw-trigger:hover {
   color: #4d4d4d;
+  cursor: pointer;
   transition-duration: 0.3s;
 }
 .header__menus .header__paw-menu-button {
@@ -115,6 +120,7 @@
 }
 .header__menus .header__paw-menu-button:hover .fa-paw-trigger {
   color: #4d4d4d;
+  cursor: pointer;
   transition-duration: 0.3s;
 }
 .header__menus .header__paw-menu-button .header__pop-up {
@@ -127,9 +133,9 @@
   transform: scale(0.9);
 }
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list {
-  margin-top: 20px;
-  background-color: #fff;
-  box-shadow: 1px 5px 5px black;
+  margin-top: 40px;
+  border-radius: 6px;
+  background-color: #2f2f2f;
 }
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li {
   font-family: "Montserrat", sans-serif;
@@ -138,6 +144,7 @@
   text-align: justify;
   list-style: none;
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   padding: 10px 8px;
   transition-duration: 0.3s;
@@ -145,6 +152,7 @@
 }
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:hover {
   color: #4d4d4d;
+  cursor: pointer;
   transition-duration: 0.3s;
   color: #6e0710;
 }

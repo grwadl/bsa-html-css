@@ -31,6 +31,7 @@
   flex: 1 1 100%;
   display: flex;
   flex-direction: column;
+  background-color: #202020;
 }
 .wrapper .main__content .main__footer {
   flex: 0 1 90px;

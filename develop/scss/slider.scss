@@ -1,10 +1,11 @@
-@import './constants.scss';
-@import './mixins/mixins.scss';
+@import 'constants';
+@import 'mixins/mixins';
 
 #slider {
   margin: 0 auto;
   width: 600px;
   max-width: 100%;
+  border-radius: 6px;
   text-align: center;
 }
 
@@ -21,6 +22,7 @@
   background: #fff;
   position: relative;
   overflow-y: hidden;
+  border-radius: 6px;
   z-index: 1;
 }
 
@@ -88,7 +90,8 @@
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
-  background: url('./img/right-arrow.png') no-repeat;
+  background: url('../../assets/img/icons/right-arrow.png') no-repeat;
+  filter: invert(100%);
   float: right;
   margin: -20px -60px 0 0;
   display: block;
@@ -102,7 +105,8 @@
 #slide2:checked ~ #controls label:nth-last-child(4),
 #slide3:checked ~ #controls label:nth-last-child(3),
 #slide4:checked ~ #controls label:nth-last-child(2) {
-  background: url('./img/left-arrow.png') no-repeat;
+  background: url('../../assets/img/icons/left-arrow.png') no-repeat;
+  filter: invert(100%);
   float: left;
   margin: -20px 0 0 -50px;
   display: block;
