@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/9b3a7cd421.js" crossorigin="anonymous"></script> <!-- fontAwesome icons-->
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./global.css">
     <meta charset="UTF-8">
@@ -11,7 +12,47 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">HEADER</header>
+    <nav class="header">
+        <section class="header__title">
+            <i class="fa-solid fa-cat"></i>
+            <p class="header__title-text">Bulka TV</p>
+        </section>
+        <section class="header__search-bar">
+            <div class="header__input-wrapper">
+                <div class="header__search-bar-wrapper">
+                    <input type="search" placeholder="find...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="header__mic-icon">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+        </section>
+        <section class="header__menus">
+            <div class="header__notification">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="header__paw-menu-button">
+                <i class="fa-solid fa-paw fa-paw-trigger"></i>
+                <div class="header__pop-up">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-link">
+                            <p>Home</p>
+                            <i class="fa-solid fa-paw"></i>
+                        </li>
+                        <li class="header__menu-link">
+                            <p>Settings</p>
+                            <i class="fa-solid fa-gear"></i>
+                        </li>
+                        <li class="header__menu-link">
+                           <p>Log out</p>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </li>
+                </div>
+                </ul>
+            </div>
+        </section>
+    </nav>
     <main class="main">
         <section class="main__toolbar">TOOLBAR</section>
         <section class="main__content">

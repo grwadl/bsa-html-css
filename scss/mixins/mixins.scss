@@ -1,0 +1,18 @@
+@import '../constants.scss';
+
+@mixin flexboxMixin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textMixin {
+  font-family: $main-font;
+  font-size: 18px;
+  text-align: justify;
+}
+
+@mixin hoverBlackItem {
+  color:lighten(black, 30);
+  transition-duration: .3s;
+}

@@ -1,6 +1,10 @@
+//this is styles and "zero-styles" with constants/global-template
+@import './constants.scss';
 * {
   margin: 0;
   padding: 0;
+  font-family: $main-font;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -10,10 +14,15 @@
   height: 100vh;
 
   .header {
-    flex: 0 1 90px;
+    position: fixed;
+    width: 100vw;
+    padding: 13px 20px;
+    top: 0;
+    left: 0;
   }
 
   .main {
+    margin-top: 90px;
     flex: 1 1 100%;
     display: flex;
     &__toolbar {
