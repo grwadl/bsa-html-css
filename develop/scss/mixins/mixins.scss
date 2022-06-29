@@ -1,4 +1,4 @@
-@import '../constants.scss';
+@import '../constants';
 
 @mixin flexboxMixin {
   display: flex;
@@ -15,5 +15,6 @@
 
 @mixin hoverBlackItem {
   color:lighten(black, 30);
+  cursor: pointer;
   transition-duration: .3s;
 }

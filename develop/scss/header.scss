@@ -1,6 +1,6 @@
 //styles for header
-@import "constants.scss";
-@import './mixins/mixins.scss';
+@import "constants";
+@import 'mixins/mixins';
 
 .header {
   @include flexboxMixin;
@@ -41,14 +41,15 @@
       input {
         @include textMixin;
         padding: 7px 30px 7px 10px;
-        border: solid black;
+        border: solid white;
+        background: $main-bg;
         width: 100%;
         border-width: 0 0 1px 0;
         transition-duration: .1s;
 
         &:focus {
           outline: none;
-          border: solid darkblue !important;
+          border: solid $app-red !important;
           border-width: 0 0 2.3px 0 !important;
           transition-duration: .1s;
         }
@@ -58,6 +59,7 @@
         font-size: 18px;
         margin-left: -25px;
         transition-duration: .3s;
+        color: white;
         z-index: 1;
         cursor: pointer;
 
@@ -73,6 +75,7 @@
 
       .fa-microphone {
         font-size: 22px;
+        color: white;
         margin: -2px 0 0 10px;
         transition-duration: .3s;
         cursor: pointer;
@@ -93,10 +96,11 @@
     gap: 20px;
 
     .fa-bell,
-    .fa-paw {
+    .fa-paw.fa-paw-trigger {
       font-size: 24px;
       cursor: pointer;
       transition-duration: .3s;
+      color: white;
 
       &:hover {
         @include hoverBlackItem;
@@ -128,14 +132,15 @@
         transform: scale(0.9);
 
         .header__menu-list {
-          margin-top: 20px;
-          background-color: #fff;
-          box-shadow: 1px 5px 5px black;
+          margin-top: 40px;
+          border-radius: 6px;
+          background-color: $main-gray;
 
           & > li {
             @include textMixin;
             list-style: none;
             display: flex;
+            justify-content: space-between;
             gap: 10px;
             padding: 10px 8px;
             transition-duration: .3s;

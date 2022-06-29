@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.main .main__toolbar {
+  padding: 20px 10px 0 20px;
+  border-right: 2px solid black;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: justify;
+  list-style: none;
+  padding: 20px 0;
+  transition-duration: 0.3s;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer:hover {
+  color: #4d4d4d;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  color: #6e0710;
+  transition-duration: 0.3s;
+}
+
+/*# sourceMappingURL=toolbar.css.map */
