@@ -5,9 +5,11 @@
   justify-content: center;
   align-items: center;
   box-shadow: 2px 1px 3px black;
+  background-color: #202020;
+  z-index: 8;
 }
 .header .fa-cat {
-  color: #ff8d00;
+  color: #6e0710;
   font-size: 32px;
 }
 .header__title {
@@ -16,12 +18,13 @@
   gap: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  color: white;
   text-align: justify;
 }
 .header__title p {
   font-size: 24px;
   margin-top: 5px;
-  color: #ff8d00;
+  color: #6e0710;
 }
 .header__search-bar {
   display: flex;
@@ -39,6 +42,7 @@
 .header__input-wrapper .header__search-bar-wrapper input {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  color: white;
   text-align: justify;
   padding: 7px 30px 7px 10px;
   border: solid black;
@@ -100,7 +104,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff8d00;
+  background-color: #6e0710;
   border-radius: 50%;
   position: relative;
   width: 45px;
@@ -130,6 +134,7 @@
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  color: white;
   text-align: justify;
   list-style: none;
   display: flex;
@@ -141,7 +146,7 @@
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:hover {
   color: #4d4d4d;
   transition-duration: 0.3s;
-  color: #ff8d00;
+  color: #6e0710;
 }
 .header__menus .header__paw-menu-button:hover .header__pop-up {
   opacity: 1;

@@ -1,0 +1,9 @@
+@import './constants.scss';
+@import './mixins/mixins.scss';
+//toolbar
+
+.main {
+  &__toolbar {
+    background-color: $main-gray;
+  }
+}
