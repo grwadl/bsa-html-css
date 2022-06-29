@@ -1,0 +1,19 @@
+{
+  "name": "bsa-html-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://grwadl@bitbucket.org/grwadl/bsa-html-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/grwadl/bsa-html-css/issues"
+  },
+  "homepage": "https://bitbucket.org/grwadl/bsa-html-css#readme"
+}

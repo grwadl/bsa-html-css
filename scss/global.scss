@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  .header {
+    flex: 0 1 90px;
+  }
+
+  .main {
+    flex: 1 1 100%;
+    display: flex;
+    &__toolbar {
+      flex: 0 1 240px;
+    }
+
+    &__content {
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+
+      .main__footer {
+        flex: 0 1 90px;
+      }
+
+      .main__categories-wrapper {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}
