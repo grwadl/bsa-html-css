@@ -5,6 +5,8 @@
 .header {
   @include flexboxMixin;
   box-shadow: 2px 1px 3px black;
+  background-color: $main-bg;
+  z-index: 8;
 
   .fa-cat {
     color: $app-red;

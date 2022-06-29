@@ -9,6 +9,7 @@
 @mixin textMixin {
   font-family: $main-font;
   font-size: 18px;
+  color: white;
   text-align: justify;
 }
 
