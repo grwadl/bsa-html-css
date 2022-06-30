@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.main__footer p {
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -10,10 +17,10 @@
 }
 .header .fa-cat {
   color: #6e0710;
-  font-size: 32px;
+  font-size: 38px;
 }
 .header__title {
-  flex: 0 1 230px;
+  flex: 0 1 280px;
   display: flex;
   gap: 10px;
   font-family: "Montserrat", sans-serif;
@@ -22,7 +29,8 @@
   text-align: justify;
 }
 .header__title p {
-  font-size: 24px;
+  font-size: 32px;
+  letter-spacing: 3px;
   margin-top: 5px;
   color: #6e0710;
 }
@@ -38,6 +46,8 @@
 }
 .header__input-wrapper .header__search-bar-wrapper {
   flex: 1 1 100%;
+  display: flex;
+  position: relative;
 }
 .header__input-wrapper .header__search-bar-wrapper input {
   font-family: "Montserrat", sans-serif;
@@ -58,6 +68,9 @@
   transition-duration: 0.1s;
 }
 .header__input-wrapper .header__search-bar-wrapper .fa-magnifying-glass {
+  position: absolute;
+  top: 10px;
+  right: 5px;
   font-size: 18px;
   margin-left: -25px;
   transition-duration: 0.3s;

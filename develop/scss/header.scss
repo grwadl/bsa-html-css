@@ -10,17 +10,18 @@
 
   .fa-cat {
     color: $app-red;
-    font-size: 32px;
+    font-size: 38px;
   }
 
   &__title {
-    flex: 0 1 230px;
+    flex: 0 1 280px;
     display: flex;
     gap: 10px;
     @include textMixin;
 
     p {
-      font-size: 24px;
+      font-size: 32px;
+      letter-spacing: 3px;
       margin-top: 5px;
       color: $app-red;
     }
@@ -37,6 +38,8 @@
 
     .header__search-bar-wrapper {
       flex: 1 1 100%;
+      display: flex;
+      position: relative;
 
       input {
         @include textMixin;
@@ -56,6 +59,9 @@
       }
 
       .fa-magnifying-glass {
+        position: absolute;
+        top: 10px;
+        right: 5px;
         font-size: 18px;
         margin-left: -25px;
         transition-duration: .3s;

@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.main__footer p {
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 #slider {
   margin: 0 auto;
   width: 600px;
@@ -89,7 +96,7 @@
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(1) {
-  background: url("../img/icons/right-arrow.png") no-repeat;
+  background: url("../../assets/img/icons/right-arrow.png") no-repeat;
   filter: invert(100%);
   float: right;
   margin: -20px -60px 0 0;
@@ -108,7 +115,7 @@
 #slide2:checked ~ #controls label:nth-last-child(4),
 #slide3:checked ~ #controls label:nth-last-child(3),
 #slide4:checked ~ #controls label:nth-last-child(2) {
-  background: url("../img/icons/left-arrow.png") no-repeat;
+  background: url("../../assets/img/icons/left-arrow.png") no-repeat;
   filter: invert(100%);
   float: left;
   margin: -20px 0 0 -50px;
@@ -192,15 +199,11 @@
   text-align: justify;
 }
 .slide-content .slide__info-block .slide__title-text .slide__title-video {
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  margin-top: 2px;
-  text-overflow: ellipsis;
+  width: 100px;
+  height: 15px;
   overflow: hidden;
-  max-width: 160px;
-  height: 1.2em;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media (max-width: 900px) {
   .slide-content .slide__info-block .slide__title-text .slide__title-video {
