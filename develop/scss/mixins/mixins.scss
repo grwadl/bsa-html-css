@@ -9,7 +9,7 @@
 @mixin textMixin {
   font-family: $main-font;
   font-size: 18px;
-  color: white;
+  color: #c3c0c0;
   text-align: justify;
 }
 
@@ -19,11 +19,11 @@
   transition-duration: .3s;
 }
 
-.main__footer {
-  p {
-    width: 100px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+@mixin longText {
+  display: block;
+  line-height: 130%;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

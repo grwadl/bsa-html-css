@@ -1,19 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-.main__footer p {
-  width: 100px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .main .main__toolbar {
-  padding: 20px 0;
+  height: 100%;
   border-right: 2px solid black;
+}
+@media (max-width: 1200px) {
+  .main .main__toolbar {
+    width: 100px;
+  }
+  .main .main__toolbar .main__aside-list {
+    max-height: unset !important;
+  }
+  .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-views {
+    display: none;
+  }
+  .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info {
+    justify-content: center;
+    flex: 0 1 100%;
+    gap: 0;
+  }
+  .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-streamer-name {
+    display: none;
+  }
+  .main .main__toolbar .main__aside-social {
+    display: none;
+  }
 }
 .main .main__toolbar .main__aside-list {
   padding: 0 20px;
-  max-height: 500px;
+  height: 100%;
+  max-height: 400px;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -23,40 +39,74 @@
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer {
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: white;
-  text-align: justify;
-  list-style: none;
-  padding: 20px 0;
-  transition-duration: 0.3s;
 }
-.main .main__toolbar .main__aside-list .main__aside-streamer:hover {
+.main .main__toolbar .main__aside-list .main__aside-streamer:hover .main__aside-streamer-info,
+.main .main__toolbar .main__aside-list .main__aside-streamer:hover .main__aside-streamer-views {
   color: #4d4d4d;
   cursor: pointer;
   transition-duration: 0.3s;
   color: #6e0710;
   transition-duration: 0.3s;
 }
-.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-avatar {
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #c3c0c0;
+  text-align: justify;
+  list-style: none;
+  padding: 20px 0;
+  transition-duration: 0.3s;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-streamer-name p {
+  display: block;
+  line-height: 130%;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80px;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-avatar {
   margin-top: -3px;
 }
-.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-avatar img {
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-avatar img {
   width: 38px;
   height: 38px;
 }
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-views {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #c3c0c0;
+  text-align: justify;
+  transition-duration: 0.3s;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-views span.live {
+  position: relative;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-views span.live::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -18px;
+  background-color: #6e0710;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
 .main .main__aside-social {
   border-top: 2px solid black;
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
 .main .main__aside-social .main__aside-social-title {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  color: white;
+  color: #c3c0c0;
   text-align: justify;
   text-align: left;
   letter-spacing: 2px;
@@ -64,8 +114,8 @@
   flex: 0 1 100%;
 }
 .main .main__aside-social .main__aside-social-wrapper {
-  margin: 20px 20px;
-  padding: 15px;
+  margin: 30px 20px;
+  padding: 25px;
   border-radius: 6px;
   border: 2px solid #202020;
 }

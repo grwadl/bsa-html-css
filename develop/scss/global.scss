@@ -31,14 +31,20 @@ body {
     flex: 1 1 100%;
     display: flex;
     &__toolbar {
-      flex: 0 1 330px;
+      width: 240px;
+      position: fixed;
     }
 
     &__content {
       flex: 1 1 100%;
       display: flex;
+      margin-left: 240px;
       flex-direction: column;
       background-color: $main-bg;
+
+      @media (max-width: 1200px) {
+        margin-left: 100px;
+      }
 
       .main__footer {
         flex: 0 1 90px;

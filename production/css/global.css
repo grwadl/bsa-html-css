@@ -30,13 +30,20 @@ body {
   display: flex;
 }
 .wrapper .main__toolbar {
-  flex: 0 1 330px;
+  width: 240px;
+  position: fixed;
 }
 .wrapper .main__content {
   flex: 1 1 100%;
   display: flex;
+  margin-left: 240px;
   flex-direction: column;
   background-color: #202020;
+}
+@media (max-width: 1200px) {
+  .wrapper .main__content {
+    margin-left: 100px;
+  }
 }
 .wrapper .main__content .main__footer {
   flex: 0 1 90px;
