@@ -157,6 +157,7 @@
 .slide-content {
   display: flex;
   height: 100%;
+  width: 100%;
   background-color: $main-gray;
 
   .slide__img-wrapper {
@@ -182,19 +183,16 @@
       width: 100%;
     }
 
+    .slide__avatar-wrapper {
+      flex: 0 0 48px;
+    }
     .slide__title-text {
       @include textMixin;
+      flex: 1 1 100%;
 
       .slide__title-video {
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        margin-top: 2px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 160px;
-        height: 1.2em;
-        white-space: nowrap;
+        @include longText;
+        width: 100px;
 
         @media (max-width: 900px) {
           max-width: 80px;
@@ -203,6 +201,10 @@
 
       .slide__creator {
         margin-top: 15px;
+
+        p {
+          @include longText;
+        }
       }
     }
 
@@ -233,3 +235,4 @@
     object-fit: cover;
   }
 }
+
