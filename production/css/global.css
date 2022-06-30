@@ -39,10 +39,12 @@ body {
   margin-left: 240px;
   flex-direction: column;
   background-color: #202020;
+  max-width: calc(100vw - 240px);
 }
 @media (max-width: 1200px) {
   .wrapper .main__content {
     margin-left: 100px;
+    max-width: calc(100vw - 100px);
   }
 }
 .wrapper .main__content .main__footer {

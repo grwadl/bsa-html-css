@@ -41,9 +41,10 @@ body {
       margin-left: 240px;
       flex-direction: column;
       background-color: $main-bg;
-
+      max-width: calc(100vw - 240px);
       @media (max-width: 1200px) {
         margin-left: 100px;
+        max-width: calc(100vw - 100px);
       }
 
       .main__footer {

@@ -64,7 +64,7 @@
 
         .main__aside-streamer-info {
           display: flex;
-          gap: 3px;
+          gap: 14px;
           align-items: center;
           @include textMixin;
           list-style: none;
@@ -73,6 +73,7 @@
 
           .main__aside-streamer-name {
             p {
+              margin-top: 3px;
               @include longText;
               width: 80px;
             }

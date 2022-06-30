@@ -23,6 +23,7 @@
   position: relative;
   overflow-y: hidden;
   border-radius: 6px;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -130,6 +131,10 @@
   margin: 0 10px;
 }
 
+.main__main-cats {
+  margin-top: 30px;
+}
+
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
@@ -185,6 +190,7 @@
 
     .slide__avatar-wrapper {
       flex: 0 0 48px;
+      height: 48px;
     }
     .slide__title-text {
       @include textMixin;
@@ -224,9 +230,8 @@
 }
 
 .avatar {
-  width: 48px;
-  margin-top: 7px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
 
   img {
     width: 100%;

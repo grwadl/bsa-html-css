@@ -9,12 +9,12 @@
 @mixin textMixin {
   font-family: $main-font;
   font-size: 18px;
-  color: #c3c0c0;
+  color: $font-light-gray;
   text-align: justify;
 }
 
 @mixin hoverBlackItem {
-  color:lighten(black, 30);
+  color: lighten(black, 30);
   cursor: pointer;
   transition-duration: .3s;
 }
