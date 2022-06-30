@@ -38,6 +38,7 @@ body {
   display: flex;
   margin-left: 240px;
   flex-direction: column;
+  position: relative;
   background-color: #202020;
   max-width: calc(100vw - 240px);
 }

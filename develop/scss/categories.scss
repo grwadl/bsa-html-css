@@ -1,68 +1,61 @@
-@import './constants.scss';
 @import './mixins/mixins.scss';
+@import './constants.scss';
 
-.slider_categories {
-  width: calc(100% - 40px);
-  height: 69px;
+.main__categories-tech-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+}
+
+.main__categories {
+  width: 64px;
+  height: 800px;
+  top: -360px;
+  position: absolute;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
+  transform: rotate(-90deg);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  
+  @media (max-width: 945px) {
+    top: -206px;
+    height: 500px;
+  }
 
-.slider_categories-slides {
-  display: flex;
-  gap: 30px;
-  overflow: scroll!important;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-.slider_categories-slides::-webkit-scrollbar {
-  display: none;
-  width: 10px;
-  height: 10px;
-}
-
-.slider_categories-slides:hover::-webkit-scrollbar{
-  display: block!important;
-}
-
-.slider_categories-slides::-webkit-scrollbar-thumb {
-  background: $font-light-gray;
-  border-radius: 10px;
-}
-.slider_categories-slides::-webkit-scrollbar-track {
-  background: transparent;
-}
-.slider_categories-slides  {
-
-  .category {
-    @include textMixin;
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    padding: 0 10px;
-    height: 32px;
-    border-radius: 10px;
-    background: $main-gray;
-    transform-origin: center center;
-    transform: scale(1);
-    position: relative;
+  .main__categories-wrapper {
+    transform: rotate(90deg);
+    margin-left: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    transition-duration: .3s;
+    gap: 40px;
+    scrollbar-width: none;
+  }
 
-    &:hover {
-      cursor: pointer;
-      transition-duration: .3s;
-      background: lighten($app-red, 5);
-    }
+  .main__categories-item {
+    margin-top: 15px;
+    @include textMixin;
+    white-space: nowrap;
+    padding: 5px 15px;
+    background-color: $main-gray;
+    border-radius: 15px;
+    transition-duration: .3s;
 
     &.active {
       background-color: $app-red;
     }
+
+    &:hover {
+      background-color: $app-red;
+      cursor: pointer;
+      transition-duration: .3s;
+    }
   }
 }
-
