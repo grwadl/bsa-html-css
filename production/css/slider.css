@@ -22,6 +22,7 @@
   position: relative;
   overflow-y: hidden;
   border-radius: 6px;
+  margin: 0 auto;
   z-index: 1;
 }
 
@@ -137,6 +138,10 @@
   margin: 0 10px;
 }
 
+.main__main-cats {
+  margin-top: 80px;
+}
+
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
@@ -188,6 +193,7 @@
 }
 .slide-content .slide__info-block .slide__avatar-wrapper {
   flex: 0 0 48px;
+  height: 48px;
 }
 .slide-content .slide__info-block .slide__title-text {
   font-family: "Montserrat", sans-serif;
@@ -238,9 +244,8 @@
 }
 
 .avatar {
-  width: 48px;
-  margin-top: 7px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
 }
 .avatar img {
   width: 100%;

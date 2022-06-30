@@ -52,7 +52,7 @@
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info {
   display: flex;
-  gap: 3px;
+  gap: 14px;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -63,6 +63,7 @@
   transition-duration: 0.3s;
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-streamer-name p {
+  margin-top: 3px;
   display: block;
   line-height: 130%;
   white-space: nowrap;

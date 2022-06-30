@@ -1,0 +1,61 @@
+@import './mixins/mixins.scss';
+@import './constants.scss';
+
+.main__categories-tech-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+}
+
+.main__categories {
+  width: 64px;
+  height: 800px;
+  top: -360px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: rotate(-90deg);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  
+  @media (max-width: 945px) {
+    top: -206px;
+    height: 500px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__categories-wrapper {
+    transform: rotate(90deg);
+    margin-left: 30px;
+    display: flex;
+    gap: 40px;
+    scrollbar-width: none;
+  }
+
+  .main__categories-item {
+    margin-top: 15px;
+    @include textMixin;
+    white-space: nowrap;
+    padding: 5px 15px;
+    background-color: $main-gray;
+    border-radius: 15px;
+    transition-duration: .3s;
+
+    &.active {
+      background-color: $app-red;
+    }
+
+    &:hover {
+      background-color: $app-red;
+      cursor: pointer;
+      transition-duration: .3s;
+    }
+  }
+}
