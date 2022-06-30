@@ -1,257 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-#slider {
-  margin: 0 auto;
-  width: 600px;
-  max-width: 100%;
-  border-radius: 6px;
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-#slider input[type=radio] {
+input[type=radio] {
   display: none;
 }
 
-#slider label {
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
   cursor: pointer;
-  text-decoration: none;
 }
 
-#slides {
-  background: #fff;
-  position: relative;
-  overflow-y: hidden;
-  border-radius: 6px;
-  margin: 0 auto;
-  z-index: 1;
-}
-
-#overflow {
+.container {
   width: 100%;
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-#slide1:checked ~ #slides .inner {
-  margin-left: 0;
-}
-
-#slide2:checked ~ #slides .inner {
-  margin-left: -100%;
-}
-
-#slide3:checked ~ #slides .inner {
-  margin-left: -200%;
-}
-
-#slide4:checked ~ #slides .inner {
-  margin-left: -300%;
-}
-
-#slides .inner {
-  transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
-  width: 400%;
-  line-height: 0;
+  max-width: 800px;
+  margin: 80px auto 0;
   height: 400px;
-}
-
-#slides .slide {
-  width: 25%;
-  border-radius: 6px;
-  float: left;
+  transform-style: preserve-3d;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #fff;
-}
-
-#controls {
-  margin: -180px 0 0 0;
-  width: 100%;
-  height: 50px;
-  z-index: 3;
-  position: relative;
-}
-
-#controls label {
-  transition: opacity 0.2s ease-out;
-  display: none;
-  width: 50px;
-  height: 50px;
-  opacity: 0.4;
-}
-
-#controls label:hover {
-  opacity: 1;
-}
-
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1) {
-  background: url("../../assets/img/icons/right-arrow.png") no-repeat;
-  filter: invert(100%);
-  float: right;
-  margin: -20px -60px 0 0;
-  display: block;
-}
-@media (max-width: 900px) {
-  #slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1) {
-    margin-top: -25px !important;
-  }
-}
-
-#slide1:checked ~ #controls label:nth-last-child(1),
-#slide2:checked ~ #controls label:nth-last-child(4),
-#slide3:checked ~ #controls label:nth-last-child(3),
-#slide4:checked ~ #controls label:nth-last-child(2) {
-  background: url("../../assets/img/icons/left-arrow.png") no-repeat;
-  filter: invert(100%);
-  float: left;
-  margin: -20px 0 0 -50px;
-  display: block;
-}
-@media (max-width: 900px) {
-  #slide1:checked ~ #controls label:nth-last-child(1),
-#slide2:checked ~ #controls label:nth-last-child(4),
-#slide3:checked ~ #controls label:nth-last-child(3),
-#slide4:checked ~ #controls label:nth-last-child(2) {
-    margin: -20px 0 0 20px;
-  }
-}
-
-#bullets {
-  margin: 150px 0 0;
-  text-align: center;
-}
-
-#bullets label {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: #ccc;
-  margin: 0 10px;
-}
-
-.main__main-cats {
-  margin-top: 80px;
-}
-
-#slide1:checked ~ #bullets label:nth-child(1),
-#slide2:checked ~ #bullets label:nth-child(2),
-#slide3:checked ~ #bullets label:nth-child(3),
-#slide4:checked ~ #bullets label:nth-child(4) {
-  background: #444;
-}
-
-@media screen and (max-width: 900px) {
-  #slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(1),
-#slide1:checked ~ #controls label:nth-last-child(2),
-#slide2:checked ~ #controls label:nth-last-child(3),
-#slide3:checked ~ #controls label:nth-last-child(4),
-#slide4:checked ~ #controls label:nth-last-child(1) {
-    margin: 0;
-  }
-  #slides {
-    max-width: calc(100% - 140px);
-    margin: 0 auto;
-  }
-}
-.slide-content {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  background-color: #2f2f2f;
-}
-.slide-content .slide__img-wrapper {
-  flex: 0 1 60%;
-}
-.slide-content .slide__img-wrapper img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-.slide-content .slide__info-block {
-  flex: 0 1 40%;
-  display: flex;
   flex-direction: column;
-  padding: 10px;
-}
-.slide-content .slide__info-block .slide__info-header {
-  display: flex;
-  flex: 0 1 70px;
-  gap: 10px;
-  width: 100%;
-}
-.slide-content .slide__info-block .slide__avatar-wrapper {
-  flex: 0 0 48px;
-  height: 48px;
-}
-.slide-content .slide__info-block .slide__title-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: #c3c0c0;
-  text-align: justify;
-  flex: 1 1 100%;
-}
-.slide-content .slide__info-block .slide__title-text .slide__title-video {
-  display: block;
-  line-height: 130%;
-  white-space: nowrap;
-  width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100px;
-}
-@media (max-width: 900px) {
-  .slide-content .slide__info-block .slide__title-text .slide__title-video {
-    max-width: 80px;
-  }
-}
-.slide-content .slide__info-block .slide__title-text .slide__creator {
-  margin-top: 15px;
-}
-.slide-content .slide__info-block .slide__title-text .slide__creator p {
-  display: block;
-  line-height: 130%;
-  white-space: nowrap;
-  width: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.slide-content .slide__info-block .slide__video-description {
-  flex: 1 1 100%;
-}
-.slide-content .slide__info-block .slide__video-description p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: #c3c0c0;
-  text-align: justify;
-  text-align: left;
-  margin-top: 30px;
-  display: inline-block;
   align-items: center;
-  word-wrap: break-word;
-  line-height: 150% !important;
 }
 
-.avatar {
-  width: 32px;
-  height: 32px;
-}
-.avatar img {
+.cards {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.cards .card {
+  display: flex;
+}
+.cards .card .card__img-wrapper {
+  flex: 0 1 65%;
+  height: 100%;
+}
+.cards .card .card__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
   object-fit: cover;
+}
+.cards .card__info-wrapper {
+  padding: 10px;
+  flex: 0 0 35%;
+  background-color: #2f2f2f;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+}
+.cards .card__info-wrapper .card__header-avatar-wrapper {
+  flex: 0 0 48px;
+}
+.cards .card__info-wrapper .card__info-header {
+  display: flex;
+  gap: 5px;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #c3c0c0;
+  text-align: justify;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name p {
+  width: 50px;
+  display: block;
+  line-height: 130%;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name .card__streamer-name p {
+  margin-top: 1px;
+  color: #131313;
+}
+.cards .card__info-wrapper .card__info-description {
+  margin-top: 30px;
+}
+.cards .card__info-wrapper .card__info-description p {
+  text-align: left !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #c3c0c0;
+  text-align: justify;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-1:checked ~ .cards #song-1 img, #item-1:checked ~ .cards #song-1 .card__info-wrapper, #item-2:checked ~ .cards #song-2 img, #item-2:checked ~ .cards #song-2 .card__info-wrapper, #item-3:checked ~ .cards #song-3 img, #item-3:checked ~ .cards #song-3 .card__info-wrapper {
+  box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
 }
 
 /*# sourceMappingURL=slider.css.map */
