@@ -1,0 +1,214 @@
+@import './constants.scss';
+@import './mixins/mixins.scss';
+
+.main__videos {
+  padding: 0 20px;
+
+  .main__video-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 -10px;
+    @include textMixin;
+
+    .main__video-item {
+      flex: 0 1 calc((100% / 3) - 20px);
+      margin: 0 10px 20px;
+
+      @media (max-width: 1015px) {
+        flex: 0 1 calc((100% / 2) - 20px);
+      }
+
+      @media (max-width: 720px) {
+        flex: 0 1 calc(100% - 20px);
+      }
+
+      .main__video-upper {
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+
+          .main__video-img-wrapper::before {
+            opacity: 1;
+            transition-duration: .5s;
+          }
+
+          .video-hover {
+            opacity: 1 !important;
+            transition-duration: .5s;
+          }
+        }
+
+        .main__video-img-wrapper {
+          width: 100%;
+          height: 200px;
+          position: relative;
+
+          &::before {
+            @include pseudoEl;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition-duration: .5s !important;
+          }
+
+          .video-hover {
+            position: absolute;
+            font-size: 32px;
+            top: calc(50% - 16px);
+            left: calc(50% - 16px);
+            margin: 0 auto;
+            opacity: 0;
+            transition-duration: .5s;
+            z-index: 2;
+          }
+          img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .main__video-live,
+        .main__video-add-info {
+          position: absolute;
+          z-index: 2;
+          border-radius: 10px;
+          font-size: 14px;
+          opacity: 0.8;
+          padding: 2px 5px;
+        }
+
+        .main__video-live {
+          top: 7px;
+          left: 7px;
+          background-color: $app-red;
+        }
+
+        .main__video-add-info {
+          bottom: 3px;
+          right: 7px;
+          background-color: $main-bg;
+        }
+      }
+
+      .main__video-main-info {
+        border-radius: 0 0 10px 10px;
+        position: relative;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        background-color: $main-gray;
+
+        .main__video-name-title {
+
+          p {
+            @include longText;
+            width: 200px;
+            transition-duration: .3s;
+
+            @media (max-width: 1063px) and  (min-width: 1017px) {
+              width: 160px;
+            }
+            
+            @media (max-width: 750px) and (min-width: 720px) {
+              width: 100px;
+            }
+
+            &:hover {
+              @include hoverRed;
+            }
+          }
+        }
+
+        .main__video-streamer-name {
+
+          p {
+            @include longText;
+            font-size: 18px;
+            color: darken($main-gray, 11);
+            transition-duration: .3s;
+
+            &:hover {
+              @include hoverRed;
+            }
+          }
+        }
+
+        .main__video-options {
+          height: 40px;
+          width: 10px;
+          position: absolute;
+          right: 10px;
+
+          .main__video-options-list {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 3;
+            transform: scale(0.9);
+            background-color: $main-bg;
+            top: -40px;
+            right: 10px;
+            transition-duration: .3s;
+
+            & > li {
+              padding: 5px 10px;
+              transition-duration: .3s;
+
+              &:hover {
+                color: $app-red;
+                transition-duration: .3s;
+              }
+            }
+          }
+
+          .main__three-dots,
+          .main__three-dots::after,
+          .main__three-dots::before
+           {
+            position: absolute;
+            content: '';
+            background-color: $font-light-gray;
+            border-radius: 50%;
+            width: 7px;
+            height: 7px;
+            transition-duration: .3s;
+          }
+          &:hover {
+            cursor: pointer;
+
+            .main__video-options-list {
+              pointer-events: unset;
+              border-radius: 10px;
+              opacity: 1;
+              transform: scale(1);
+              transition-duration: .3s;
+            }
+
+            .main__three-dots::before, .main__three-dots::after, .main__three-dots {
+              transition-duration: .3s;
+              background-color: $main-bg;
+            }
+          }
+
+          .main__three-dots {
+            top: 10px;
+          }
+
+          .main__three-dots::before {
+            top: 10px;
+          }
+
+          .main__three-dots::after {
+            top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,13 +5,17 @@
 
   .main__toolbar {
     height: 100%;
+    background-color: $main-gray;
+    z-index: 4;
     border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 1200px) {
       width: 100px;
       .main__aside-list {
         max-height: unset !important;
-
+        flex: 0 1 100% !important;
         .main__aside-streamer {
 
           .main__aside-streamer-views {
@@ -37,8 +41,7 @@
 
     .main__aside-list {
       padding: 0 20px;
-      height: 100%;
-      max-height: 400px;
+      flex: 0 1 60%;
       overflow: auto;
       -ms-overflow-style: none;
       scrollbar-width: none;
@@ -113,6 +116,8 @@
   }
 
   .main__aside-social {
+    flex: 0 1 40%;
+    padding-bottom: 60px;
     border-top: 2px solid black;
     display: flex;
     flex-wrap: wrap;
