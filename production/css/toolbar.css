@@ -56,7 +56,7 @@
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info {
   display: flex;
-  gap: 14px;
+  gap: 5px;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -77,10 +77,8 @@
   text-overflow: ellipsis;
   width: 80px;
 }
-.main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-avatar {
-  margin-top: -3px;
-}
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-avatar img {
+  margin-top: 3px;
   width: 38px;
   height: 38px;
 }
