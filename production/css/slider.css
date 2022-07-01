@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 80px auto 0;
+  height: 400px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.cards .card {
+  display: flex;
+}
+.cards .card .card__img-wrapper {
+  flex: 0 1 65%;
+  height: 100%;
+  position: relative;
+}
+.cards .card .card__img-wrapper .video-hover {
+  color: #c3c0c0;
+  position: absolute;
+  font-size: 32px;
+  top: calc(50% - 16px);
+  left: calc(50% - 16px);
+  z-index: 333;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.cards .card .card__img-wrapper:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+.cards .card .card__img-wrapper:hover:before {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+.cards .card .card__img-wrapper:hover .video-hover {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+.cards .card .card__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+.cards .card__info-wrapper {
+  padding: 10px;
+  flex: 0 0 35%;
+  background-color: #2f2f2f;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+}
+.cards .card__info-wrapper .card__header-avatar-wrapper {
+  flex: 0 0 40px;
+}
+.cards .card__info-wrapper .card__info-header {
+  display: flex;
+  gap: 15px;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #c3c0c0;
+  text-align: justify;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name p {
+  width: 50px;
+  transition-duration: 0.3s;
+  display: block;
+  line-height: 130%;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name p:hover {
+  color: #6e0710;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name .card__streamer-name p {
+  margin-top: 1px;
+  color: #131313;
+  transition-duration: 0.3s;
+}
+.cards .card__info-wrapper .card__info-header .card__title-name .card__streamer-name p:hover {
+  color: #6e0710;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.cards .card__info-wrapper .card__info-description {
+  margin-top: 30px;
+}
+.cards .card__info-wrapper .card__info-description p {
+  text-align: left !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #c3c0c0;
+  text-align: justify;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-1:checked ~ .cards #song-1 img, #item-1:checked ~ .cards #song-1 .card__info-wrapper, #item-2:checked ~ .cards #song-2 img, #item-2:checked ~ .cards #song-2 .card__info-wrapper, #item-3:checked ~ .cards #song-3 img, #item-3:checked ~ .cards #song-3 .card__info-wrapper {
+  box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
+}
+
+/*# sourceMappingURL=slider.css.map */

@@ -1,0 +1,56 @@
+@import '../constants';
+
+@mixin flexboxMixin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textMixin {
+  font-family: $main-font;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: $font-light-gray;
+  text-align: justify;
+}
+
+@mixin hoverBlackItem {
+  color: lighten(black, 30);
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+@mixin longText {
+  display: block;
+  line-height: 130%;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin pseudoEl {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+}
+
+@mixin hoverRed {
+  color: $app-red;
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+@mixin changeSelect {
+
+  ::-moz-selection {
+    color: black;
+    background: $app-red;
+  }
+
+  ::selection {
+    color: black;
+    background: $app-red;
+  }
+}

@@ -1,0 +1,196 @@
+//styles for header
+@import "constants";
+@import 'mixins/mixins';
+
+.header {
+  @include flexboxMixin;
+  box-shadow: 2px 1px 3px black;
+  background-color: $main-bg;
+  z-index: 8;
+
+
+
+  .fa-cat {
+    color: $app-red;
+    font-size: 38px;
+
+    @media(max-width: 1057px) {
+      font-size: 24px;
+    }
+  }
+
+  &__title {
+    flex: 0 1 280px;
+    display: flex;
+    gap: 10px;
+    @include textMixin;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 32px;
+      letter-spacing: 3px;
+      margin-top: 5px;
+      color: $app-red;
+
+      @media(max-width: 1057px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__search-bar {
+    @include flexboxMixin;
+    flex: 1 1 80%;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex: 0 1 600px;
+
+    .header__search-bar-wrapper {
+      flex: 1 1 100%;
+      display: flex;
+      position: relative;
+
+      input {
+        @include textMixin;
+        padding: 7px 30px 7px 10px;
+        border: solid white;
+        background: $main-bg;
+        width: 100%;
+        border-width: 0 0 1px 0;
+        transition-duration: .1s;
+
+        &:focus {
+          outline: none;
+          border: solid $app-red !important;
+          border-width: 0 0 2.3px 0 !important;
+          transition-duration: .1s;
+        }
+      }
+
+      .fa-magnifying-glass {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 18px;
+        margin-left: -25px;
+        transition-duration: .3s;
+        color: $font-light-gray;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover {
+          color: lighten(black, 30);
+          transition-duration: .3s;
+        }
+      }
+    }
+
+    .header__mic-icon {
+      @include flexboxMixin;
+
+      .fa-microphone {
+        font-size: 22px;
+        color: $font-light-gray;
+        margin: -2px 0 0 10px;
+        transition-duration: .3s;
+        cursor: pointer;
+
+        &:hover {
+          color: lighten(black, 30);
+          transition-duration: .3s;
+        }
+      }
+    }
+  }
+
+  &__menus {
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    .fa-bell,
+    .fa-paw.fa-paw-trigger {
+      font-size: 24px;
+      cursor: pointer;
+      transition-duration: .3s;
+      color: $font-light-gray;
+
+      &:hover {
+        @include hoverBlackItem;
+      }
+    }
+
+    .header__paw-menu-button {
+      @include flexboxMixin;
+      background-color: $app-red;
+      border-radius: 50%;
+      position: relative;
+      width: 45px;
+      height: 45px;
+
+      &:hover {
+        cursor: pointer;
+        .fa-paw-trigger {
+          @include hoverBlackItem;
+        }
+      }
+
+      .header__pop-up {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: -5px;
+        top: 18px;
+        transition-duration: .3s;
+        transform: scale(0.9);
+
+        .header__menu-list {
+          margin-top: 40px;
+          border-radius: 6px;
+          background-color: $main-gray;
+
+          & > li:nth-child(1) {
+            border-radius: 10px 10px 0 0;
+          }
+
+          & > li:nth-child(3) {
+            border-radius: 0 0 10px 10px;
+          }
+
+          & > li {
+            @include textMixin;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px 8px;
+            transition-duration: .5s;
+            cursor: pointer;
+
+            &:hover {
+              @include hoverBlackItem;
+              transition-duration: .5s;
+              background-color: lighten($main-gray, 10);
+              color: $app-red;
+            }
+          }
+        }
+      }
+
+      &:hover .header__pop-up {
+        opacity: 1;
+        pointer-events: unset;
+        transition-duration: .3s;
+        transform: scale(1);
+      }
+    }
+
+  }
+}

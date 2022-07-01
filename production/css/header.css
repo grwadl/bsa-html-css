@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 1px 3px black;
+  background-color: #202020;
+  z-index: 8;
+}
+.header .fa-cat {
+  color: #6e0710;
+  font-size: 38px;
+}
+@media (max-width: 1057px) {
+  .header .fa-cat {
+    font-size: 24px;
+  }
+}
+.header__title {
+  flex: 0 1 280px;
+  display: flex;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #c3c0c0;
+  text-align: justify;
+}
+.header__title:hover {
+  cursor: pointer;
+}
+.header__title p {
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+  color: #6e0710;
+}
+@media (max-width: 1057px) {
+  .header__title p {
+    font-size: 18px;
+  }
+}
+.header__search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 80%;
+}
+.header__input-wrapper {
+  display: flex;
+  flex: 0 1 600px;
+}
+.header__input-wrapper .header__search-bar-wrapper {
+  flex: 1 1 100%;
+  display: flex;
+  position: relative;
+}
+.header__input-wrapper .header__search-bar-wrapper input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #c3c0c0;
+  text-align: justify;
+  padding: 7px 30px 7px 10px;
+  border: solid white;
+  background: #202020;
+  width: 100%;
+  border-width: 0 0 1px 0;
+  transition-duration: 0.1s;
+}
+.header__input-wrapper .header__search-bar-wrapper input:focus {
+  outline: none;
+  border: solid #6e0710 !important;
+  border-width: 0 0 2.3px 0 !important;
+  transition-duration: 0.1s;
+}
+.header__input-wrapper .header__search-bar-wrapper .fa-magnifying-glass {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 18px;
+  margin-left: -25px;
+  transition-duration: 0.3s;
+  color: #c3c0c0;
+  z-index: 1;
+  cursor: pointer;
+}
+.header__input-wrapper .header__search-bar-wrapper .fa-magnifying-glass:hover {
+  color: #4d4d4d;
+  transition-duration: 0.3s;
+}
+.header__input-wrapper .header__mic-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__input-wrapper .header__mic-icon .fa-microphone {
+  font-size: 22px;
+  color: #c3c0c0;
+  margin: -2px 0 0 10px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.header__input-wrapper .header__mic-icon .fa-microphone:hover {
+  color: #4d4d4d;
+  transition-duration: 0.3s;
+}
+.header__menus {
+  flex: 0 1 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+.header__menus .fa-bell,
+.header__menus .fa-paw.fa-paw-trigger {
+  font-size: 24px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  color: #c3c0c0;
+}
+.header__menus .fa-bell:hover,
+.header__menus .fa-paw.fa-paw-trigger:hover {
+  color: #4d4d4d;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.header__menus .header__paw-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e0710;
+  border-radius: 50%;
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+.header__menus .header__paw-menu-button:hover {
+  cursor: pointer;
+}
+.header__menus .header__paw-menu-button:hover .fa-paw-trigger {
+  color: #4d4d4d;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.header__menus .header__paw-menu-button .header__pop-up {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: -5px;
+  top: 18px;
+  transition-duration: 0.3s;
+  transform: scale(0.9);
+}
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list {
+  margin-top: 40px;
+  border-radius: 6px;
+  background-color: #2f2f2f;
+}
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:nth-child(1) {
+  border-radius: 10px 10px 0 0;
+}
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:nth-child(3) {
+  border-radius: 0 0 10px 10px;
+}
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #c3c0c0;
+  text-align: justify;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 8px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:hover {
+  color: #4d4d4d;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  transition-duration: 0.5s;
+  background-color: #494949;
+  color: #6e0710;
+}
+.header__menus .header__paw-menu-button:hover .header__pop-up {
+  opacity: 1;
+  pointer-events: unset;
+  transition-duration: 0.3s;
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=header.css.map */
