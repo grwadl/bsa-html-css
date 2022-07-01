@@ -41,3 +41,16 @@
   cursor: pointer;
   transition-duration: .3s;
 }
+
+@mixin changeSelect {
+
+  ::-moz-selection {
+    color: black;
+    background: $app-red;
+  }
+
+  ::selection {
+    color: black;
+    background: $app-red;
+  }
+}

@@ -27,6 +27,9 @@
   color: #c3c0c0;
   text-align: justify;
 }
+.header__title:hover {
+  cursor: pointer;
+}
 .header__title p {
   font-size: 32px;
   letter-spacing: 3px;
@@ -79,7 +82,7 @@
   font-size: 18px;
   margin-left: -25px;
   transition-duration: 0.3s;
-  color: white;
+  color: #c3c0c0;
   z-index: 1;
   cursor: pointer;
 }
@@ -94,7 +97,7 @@
 }
 .header__input-wrapper .header__mic-icon .fa-microphone {
   font-size: 22px;
-  color: white;
+  color: #c3c0c0;
   margin: -2px 0 0 10px;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -115,7 +118,7 @@
   font-size: 24px;
   cursor: pointer;
   transition-duration: 0.3s;
-  color: white;
+  color: #c3c0c0;
 }
 .header__menus .fa-bell:hover,
 .header__menus .fa-paw.fa-paw-trigger:hover {
@@ -155,6 +158,12 @@
   border-radius: 6px;
   background-color: #2f2f2f;
 }
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:nth-child(1) {
+  border-radius: 10px 10px 0 0;
+}
+.header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:nth-child(3) {
+  border-radius: 0 0 10px 10px;
+}
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -166,13 +175,15 @@
   justify-content: space-between;
   gap: 10px;
   padding: 10px 8px;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   cursor: pointer;
 }
 .header__menus .header__paw-menu-button .header__pop-up .header__menu-list > li:hover {
   color: #4d4d4d;
   cursor: pointer;
   transition-duration: 0.3s;
+  transition-duration: 0.5s;
+  background-color: #494949;
   color: #6e0710;
 }
 .header__menus .header__paw-menu-button:hover .header__pop-up {
