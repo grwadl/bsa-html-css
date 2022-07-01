@@ -5,6 +5,7 @@
 
   .main__toolbar {
     height: 100%;
+    background-color: $main-gray;
     z-index: 4;
     border-right: 2px solid black;
     display: flex;
@@ -14,7 +15,7 @@
       width: 100px;
       .main__aside-list {
         max-height: unset !important;
-
+        flex: 0 1 100% !important;
         .main__aside-streamer {
 
           .main__aside-streamer-views {
