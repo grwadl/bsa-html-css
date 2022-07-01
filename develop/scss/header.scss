@@ -79,7 +79,7 @@
         font-size: 18px;
         margin-left: -25px;
         transition-duration: .3s;
-        color: white;
+        color: $font-light-gray;
         z-index: 1;
         cursor: pointer;
 
@@ -95,7 +95,7 @@
 
       .fa-microphone {
         font-size: 22px;
-        color: white;
+        color: $font-light-gray;
         margin: -2px 0 0 10px;
         transition-duration: .3s;
         cursor: pointer;
@@ -120,7 +120,7 @@
       font-size: 24px;
       cursor: pointer;
       transition-duration: .3s;
-      color: white;
+      color: $font-light-gray;
 
       &:hover {
         @include hoverBlackItem;

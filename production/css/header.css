@@ -82,7 +82,7 @@
   font-size: 18px;
   margin-left: -25px;
   transition-duration: 0.3s;
-  color: white;
+  color: #c3c0c0;
   z-index: 1;
   cursor: pointer;
 }
@@ -97,7 +97,7 @@
 }
 .header__input-wrapper .header__mic-icon .fa-microphone {
   font-size: 22px;
-  color: white;
+  color: #c3c0c0;
   margin: -2px 0 0 10px;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -118,7 +118,7 @@
   font-size: 24px;
   cursor: pointer;
   transition-duration: 0.3s;
-  color: white;
+  color: #c3c0c0;
 }
 .header__menus .fa-bell:hover,
 .header__menus .fa-paw.fa-paw-trigger:hover {

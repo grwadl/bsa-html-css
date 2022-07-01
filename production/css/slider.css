@@ -89,7 +89,7 @@ input[type=radio] {
   border-radius: 0 10px 10px 0;
 }
 .cards .card__info-wrapper .card__header-avatar-wrapper {
-  flex: 0 0 48px;
+  flex: 0 0 40px;
 }
 .cards .card__info-wrapper .card__info-header {
   display: flex;
