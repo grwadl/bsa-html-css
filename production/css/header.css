@@ -13,7 +13,7 @@
   font-size: 38px;
   margin-top: 5px;
 }
-@media (max-width: 1057px) {
+@media (max-width: 1070px) {
   .header .fa-cat {
     font-size: 24px;
     margin-top: 4px;
@@ -38,7 +38,7 @@
   margin-top: 5px;
   color: #6e0710;
 }
-@media (max-width: 1057px) {
+@media (max-width: 1070px) {
   .header__title p {
     font-size: 18px;
   }
