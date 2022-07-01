@@ -59,6 +59,7 @@ input[type=radio] {
       &:before {
         @include pseudoEl;
         width: 100%;
+        border-radius: 10px 0 0 10px;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
         transition-duration: .5s;
@@ -100,7 +101,7 @@ input[type=radio] {
 
     .card__info-header {
       display: flex;
-      gap: 5px;
+      gap: 15px;
 
       .card__title-name {
         @include textMixin;

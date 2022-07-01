@@ -1,5 +1,6 @@
-@import 'constants';
-@import 'mixins/mixins';
+@import 'constants.scss';
+@import 'mixins/mixins.scss';
+@import 'animations.scss';
 
 .main {
 
@@ -40,7 +41,6 @@
     }
 
     .main__aside-list {
-      padding: 0 20px;
       flex: 0 1 60%;
       overflow: auto;
       -ms-overflow-style: none;
@@ -51,11 +51,15 @@
       }
 
       .main__aside-streamer {
+        padding: 0 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition-duration: .5s;
 
         &:hover {
+          background-color: $main-bg;
+          transition-duration: .5s;
 
           .main__aside-streamer-info,
           .main__aside-streamer-views {
@@ -67,7 +71,7 @@
 
         .main__aside-streamer-info {
           display: flex;
-          gap: 5px;
+          gap: 10px;
           align-items: center;
           @include textMixin;
           list-style: none;
@@ -86,8 +90,6 @@
 
             img {
               margin-top: 3px;
-              width: 38px;
-              height: 38px;
             }
           }
         }
@@ -102,12 +104,15 @@
             &::before {
               content: '';
               position: absolute;
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
               top: 6px;
               left: -18px;
               background-color: $app-red;
               border-radius: 50%;
               width: 10px;
               height: 10px;
+              transform: scale(1);
+              animation: pulse-black 2s infinite;
             }
           }
         }
@@ -124,10 +129,11 @@
 
     .main__aside-social-title {
       @include textMixin;
-      text-align: left;
+      text-align: center;
       letter-spacing: 2px;
       margin-bottom: 20px;
       flex: 0 1 100%;
+
     }
 
     .main__aside-social-wrapper {
@@ -148,7 +154,7 @@
 
           &:hover {
             transition-duration: .3s;
-            color: lighten(black, 40);
+            color: $app-red;
           }
         }
       }

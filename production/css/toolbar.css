@@ -1,5 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+@keyframes linearGoCat {
+  5% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: -50px;
+    left: 25%;
+  }
+  50% {
+    left: 50%;
+    top: 0;
+  }
+  75% {
+    top: -50px;
+    left: 75%;
+  }
+  100% {
+    top: 0;
+    left: 100%;
+  }
+}
 .main .main__toolbar {
   height: 100%;
   background-color: #2f2f2f;
@@ -32,7 +68,6 @@
   }
 }
 .main .main__toolbar .main__aside-list {
-  padding: 0 20px;
   flex: 0 1 60%;
   overflow: auto;
   -ms-overflow-style: none;
@@ -42,9 +77,15 @@
   display: none;
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer {
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition-duration: 0.5s;
+}
+.main .main__toolbar .main__aside-list .main__aside-streamer:hover {
+  background-color: #202020;
+  transition-duration: 0.5s;
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer:hover .main__aside-streamer-info,
 .main .main__toolbar .main__aside-list .main__aside-streamer:hover .main__aside-streamer-views {
@@ -56,7 +97,7 @@
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -79,8 +120,6 @@
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-info .main__aside-avatar img {
   margin-top: 3px;
-  width: 38px;
-  height: 38px;
 }
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-views {
   font-family: "Montserrat", sans-serif;
@@ -96,12 +135,15 @@
 .main .main__toolbar .main__aside-list .main__aside-streamer .main__aside-streamer-views span.live::before {
   content: "";
   position: absolute;
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
   top: 6px;
   left: -18px;
   background-color: #6e0710;
   border-radius: 50%;
   width: 10px;
   height: 10px;
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
 }
 .main .main__aside-social {
   flex: 0 1 40%;
@@ -116,7 +158,7 @@
   letter-spacing: 1px;
   color: #c3c0c0;
   text-align: justify;
-  text-align: left;
+  text-align: center;
   letter-spacing: 2px;
   margin-bottom: 20px;
   flex: 0 1 100%;
@@ -139,7 +181,7 @@
 }
 .main .main__aside-social .main__aside-social-wrapper .main__aside-social-icons > a > i:hover {
   transition-duration: 0.3s;
-  color: #666666;
+  color: #6e0710;
 }
 
 /*# sourceMappingURL=toolbar.css.map */

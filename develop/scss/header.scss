@@ -25,6 +25,10 @@
     gap: 10px;
     @include textMixin;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     p {
       font-size: 32px;
       letter-spacing: 3px;
@@ -152,6 +156,14 @@
           border-radius: 6px;
           background-color: $main-gray;
 
+          & > li:nth-child(1) {
+            border-radius: 10px 10px 0 0;
+          }
+
+          & > li:nth-child(3) {
+            border-radius: 0 0 10px 10px;
+          }
+
           & > li {
             @include textMixin;
             list-style: none;
@@ -159,11 +171,13 @@
             justify-content: space-between;
             gap: 10px;
             padding: 10px 8px;
-            transition-duration: .3s;
+            transition-duration: .5s;
             cursor: pointer;
 
             &:hover {
               @include hoverBlackItem;
+              transition-duration: .5s;
+              background-color: lighten($main-gray, 10);
               color: $app-red;
             }
           }
