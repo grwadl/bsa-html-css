@@ -48,9 +48,14 @@ body {
   left: 0;
 }
 .wrapper .main {
-  margin-top: 71px;
+  padding-top: 79px;
   flex: 1 1 100%;
   display: flex;
+}
+@media (max-width: 1070px) {
+  .wrapper .main {
+    padding-top: 71px;
+  }
 }
 .wrapper .main__toolbar {
   width: 240px;
@@ -63,7 +68,7 @@ body {
   flex-direction: column;
   position: relative;
   background-color: #202020;
-  max-width: calc(100vw - 240px);
+  width: 100%;
 }
 @media (max-width: 1200px) {
   .wrapper .main__content {
