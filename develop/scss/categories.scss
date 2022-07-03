@@ -1,56 +1,57 @@
 @import './mixins/mixins.scss';
 @import './constants.scss';
 
-.main__categories-tech-wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-
-}
-
 .main__categories {
-  width: 64px;
-  height: 800px;
-  top: -360px;
+  width: 80px;
   position: absolute;
+  max-height: calc(100vw - 280px);
+  display: flex;
+  flex-direction: column;
+  margin-left: 19px;
+  gap: 55px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  transform: rotate(-90deg);
+  top: 0;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
   overflow-y: scroll;
   scrollbar-width: none;
-  
-  @media (max-width: 945px) {
-    top: -206px;
-    height: 500px;
+
+  @media (max-width: 1200px) {
+    max-height: calc(100vw - 140px);
+  }
+
+  & > div:nth-child(1) {
+    background-color: $app-red;
+    margin-top: 120px;
+  }
+
+  & > div:nth-last-child(1) {
+    margin-bottom: 0 !important;
   }
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  .main__categories-wrapper {
-    transform: rotate(90deg);
-    margin-left: 30px;
-    display: flex;
-    gap: 40px;
-    scrollbar-width: none;
-  }
-
   .main__categories-item {
-    margin-top: 30px;
+    transform:rotate(90deg) translateY(60px);
+    transform-origin: right top;
+    height: 80px;
+    margin: 30px 0;
+    width: 120px;
+    p {
+      @include longText;
+      width: 100%;
+      padding: 3.3px 0;
+      text-align: center;
+    }
     @include textMixin;
     white-space: nowrap;
     padding: 5px 15px;
     background-color: $main-gray;
     border-radius: 15px;
     transition-duration: .3s;
-
-    &.active {
-      background-color: $app-red;
-    }
 
     &:hover {
       background-color: $app-red;

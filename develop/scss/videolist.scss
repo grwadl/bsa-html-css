@@ -2,26 +2,27 @@
 @import './mixins/mixins.scss';
 
 .main__videos {
-  padding: 0 30px;
+  padding: 0 20px;
+  margin: 0 auto;
 
   .main__video-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0 -15px;
+    margin: 0 -10px;
     @include textMixin;
 
     .main__video-item {
-      flex: 0 1 calc((100% / 3) - 30px);
-      margin: 0 15px 30px;
+      flex: 0 1 calc((100% / 3) - 20px);
+      margin: 0 10px 20px;
       box-shadow: 0 0 5px 0 rgba(81, 81, 81, 0.47);
 
       @media (max-width: 1015px) {
-        flex: 0 1 calc((100% / 2) - 30px);
+        flex: 0 1 calc((100% / 2) - 20px);
       }
 
       @media (max-width: 720px) {
-        flex: 0 1 calc(100% - 30px);
+        flex: 0 1 calc(100% - 20px);
       }
 
       .main__video-upper {

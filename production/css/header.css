@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw !important;
   box-shadow: 2px 1px 3px black;
   background-color: #202020;
   z-index: 8;
@@ -79,7 +80,7 @@
 }
 .header__input-wrapper .header__search-bar-wrapper .fa-magnifying-glass {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 5px;
   font-size: 18px;
   margin-left: -25px;

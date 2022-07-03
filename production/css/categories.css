@@ -1,43 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-.main__categories-tech-wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 3;
-}
-
 .main__categories {
-  width: 64px;
-  height: 800px;
-  top: -360px;
+  width: 80px;
   position: absolute;
+  max-height: calc(100vw - 280px);
+  display: flex;
+  flex-direction: column;
+  margin-left: 19px;
+  gap: 55px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  transform: rotate(-90deg);
+  top: 0;
+  transform: rotate(-90deg) translateY(-80px);
+  transform-origin: right top;
   overflow-y: scroll;
   scrollbar-width: none;
 }
-@media (max-width: 945px) {
+@media (max-width: 1200px) {
   .main__categories {
-    top: -206px;
-    height: 500px;
+    max-height: calc(100vw - 140px);
   }
+}
+.main__categories > div:nth-child(1) {
+  background-color: #6e0710;
+  margin-top: 120px;
+}
+.main__categories > div:nth-last-child(1) {
+  margin-bottom: 0 !important;
 }
 .main__categories::-webkit-scrollbar {
   display: none;
 }
-.main__categories .main__categories-wrapper {
-  transform: rotate(90deg);
-  margin-left: 30px;
-  display: flex;
-  gap: 40px;
-  scrollbar-width: none;
-}
 .main__categories .main__categories-item {
-  margin-top: 30px;
+  transform: rotate(90deg) translateY(60px);
+  transform-origin: right top;
+  height: 80px;
+  margin: 30px 0;
+  width: 120px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   letter-spacing: 1px;
@@ -49,8 +48,16 @@
   border-radius: 15px;
   transition-duration: 0.3s;
 }
-.main__categories .main__categories-item.active {
-  background-color: #6e0710;
+.main__categories .main__categories-item p {
+  display: block;
+  line-height: 130%;
+  white-space: nowrap;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 3.3px 0;
+  text-align: center;
 }
 .main__categories .main__categories-item:hover {
   background-color: #6e0710;
