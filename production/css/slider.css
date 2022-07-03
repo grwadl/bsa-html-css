@@ -89,6 +89,7 @@ input[type=radio] {
 }
 .cards .card__info-wrapper .card__header-avatar-wrapper {
   flex: 0 0 40px;
+  margin-top: 4px;
 }
 .cards .card__info-wrapper .card__info-header {
   display: flex;
