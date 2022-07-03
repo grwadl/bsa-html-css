@@ -49,9 +49,14 @@ body {
   }
 
   .main {
-    margin-top: 71px;
+    padding-top: 79px;
     flex: 1 1 100%;
     display: flex;
+
+    @media(max-width: 1070px) {
+      padding-top: 71px;
+    }
+
     &__toolbar {
       width: 240px;
       position: fixed;
@@ -64,7 +69,7 @@ body {
       flex-direction: column;
       position: relative;
       background-color: $main-bg;
-      max-width: calc(100vw - 240px);
+      width: calc(100%);
       @media (max-width: 1200px) {
         margin-left: 100px;
         max-width: calc(100vw - 100px);

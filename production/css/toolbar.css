@@ -147,10 +147,7 @@
 }
 .main .main__aside-social {
   flex: 0 1 40%;
-  padding-bottom: 60px;
   border-top: 2px solid black;
-  display: flex;
-  flex-wrap: wrap;
 }
 .main .main__aside-social .main__aside-social-title {
   font-family: "Montserrat", sans-serif;
@@ -164,8 +161,8 @@
   flex: 0 1 100%;
 }
 .main .main__aside-social .main__aside-social-wrapper {
-  margin: 30px 20px;
-  padding: 25px;
+  margin: 15px 20px;
+  padding: 20px;
   border-radius: 6px;
   border: 2px solid #202020;
 }
