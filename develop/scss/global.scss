@@ -49,7 +49,7 @@ body {
   }
 
   .main {
-    padding-top: 79px;
+    padding-top: 71.5px;
     flex: 1 1 100%;
     display: flex;
 
@@ -98,6 +98,29 @@ body {
         height: 30px;
         box-shadow: none!important;
       }
+    }
+
+    .video-live,
+    .video-add-info {
+      @include textMixin;
+      position: absolute;
+      z-index: 2;
+      border-radius: 10px;
+      font-size: 14px;
+      opacity: 0.8;
+      padding: 2px 5px;
+    }
+
+    .video-live {
+      top: 7px;
+      left: 7px;
+      background-color: $app-red;
+    }
+
+    .video-add-info {
+      bottom: 3px;
+      right: 7px;
+      background-color: $main-bg;
     }
   }
 }
